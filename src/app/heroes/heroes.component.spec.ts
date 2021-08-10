@@ -1,5 +1,6 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule, By } from '@angular/platform-browser';
 import { HeroesComponent } from './heroes.component';
 
 describe('HeroesComponent', () => {
@@ -8,7 +9,11 @@ describe('HeroesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroesComponent ]
+      declarations: [ HeroesComponent ],
+      imports: [
+        BrowserModule,
+        FormsModule
+      ],
     })
     .compileComponents();
   });
@@ -54,9 +59,9 @@ describe('HeroesComponent', () => {
     firstHeroInput.value = 'modified';
     firstHeroInput.dispatchEvent(new Event('input'));
 
-    fixture.detectChanges();
     await fixture.whenStable();
+    fixture.detectChanges();
 
-    expect(firstHeroLi.textContent).toBe('modified');
+    expect(firstHeroLi.textContent).toContain('modified');
   });
 });

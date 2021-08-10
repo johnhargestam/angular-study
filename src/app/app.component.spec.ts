@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { By } from '@angular/platform-browser';
+import { HeroesComponent } from './heroes/heroes.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeroesComponent
       ],
     }).compileComponents();
   });
