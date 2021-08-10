@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { By } from '@angular/platform-browser';
-import { HeroesComponent } from './components/heroes/heroes.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -14,8 +13,7 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent,
-        HeroesComponent
+        AppComponent
       ],
     }).compileComponents();
   });
@@ -28,10 +26,6 @@ describe('AppComponent', () => {
 
   it('should render', () => {
     expect(component).toBeTruthy();
-  });
-
-  it(`should have the title 'Tour of Heroes'`, () => {
-    expect(component.title).toEqual('Tour of Heroes');
   });
 
   it('should render the router-outlet component', () => {

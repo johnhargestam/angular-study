@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroesComponent } from './components/heroes/heroes.component';
+import { BlinkerComponent } from './components/blinker/blinker.component';
 
 const routes: Routes = [
-  { path: 'heroes', component: HeroesComponent }
+  { path: 'blinker', component: BlinkerComponent }
 ];
 
 @NgModule({
