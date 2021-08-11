@@ -1,4 +1,4 @@
-import { of, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { BlinkerService } from 'src/app/services/blinker.service';
 import { BlinkerComponent } from './blinker.component';
 

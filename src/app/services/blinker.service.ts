@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class BlinkerService {
 
-  readonly INTERVAL = 500;
+  readonly INTERVAL = 500; //ms
 
   constructor() { }
 

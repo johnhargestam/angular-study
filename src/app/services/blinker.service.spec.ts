@@ -1,7 +1,5 @@
-import { TestBed } from '@angular/core/testing';
 import { TestScheduler } from 'rxjs/testing';
 import { take } from 'rxjs/operators';
-
 import { BlinkerService } from './blinker.service';
 
 describe('BlinkerService', () => {
@@ -9,8 +7,7 @@ describe('BlinkerService', () => {
   let testScheduler: TestScheduler;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(BlinkerService);
+    service = new BlinkerService();
     testScheduler = new TestScheduler((actual, expected) => {
       expect(actual).toEqual(expected);
     });

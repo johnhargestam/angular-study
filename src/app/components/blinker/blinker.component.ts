@@ -10,9 +10,9 @@ export class BlinkerComponent implements OnInit {
 
   public text = '';
 
-  constructor(private blinkerService: BlinkerService) {}
+  constructor(private service: BlinkerService) {}
 
   ngOnInit(): void {
-    this.blinkerService.isLit().subscribe(lit => this.text = lit ? 'X' : '');
+    this.service.isLit().subscribe(lit => this.text = lit ? 'X' : '');
   }
 }
